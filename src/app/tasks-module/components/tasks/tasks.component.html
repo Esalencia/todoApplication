@@ -1,0 +1,51 @@
+
+    <h2>Tasks by Status</h2> 
+<div class="tasks-container">
+
+  <h2>Open Tasks</h2>
+    <nz-card class="task-card" *ngFor="let task of openTasks">
+      <nz-card-meta
+        nzTitle="{{ task.name }}"
+        nzDescription="{{ task.description }}">
+      </nz-card-meta>
+      <p>Status: {{ task.priority }}</p>
+      <p>Status: {{ task.status }}</p>
+      <p>Due Date: {{ task.dueDate }}</p>
+      <div class="task-actions">
+        <button nz-button nzType="primary" (click)="editTask(task)">Edit</button>
+        <button nz-button nzType="danger" (click)="deleteTask(task)">Delete</button>
+      </div>
+    </nz-card>
+  
+    <h2>In Progress Tasks</h2>
+    <nz-card class="task-card" *ngFor="let task of inProgressTasks">
+      <nz-card-meta
+        nzTitle="{{ task.name }}"
+        nzDescription="{{ task.description }}">
+      </nz-card-meta>
+      <p>Status: {{ task.priority }}</p>
+      <p>Status: {{ task.status }}</p>
+      <p>Due Date: {{ task.dueDate }}</p>
+      <div class="task-actions">
+        <button nz-button nzType="primary" (click)="editTask(task)">Edit</button>
+        <button nz-button nzType="danger" (click)="deleteTask(task)">Delete</button>
+      </div>
+    </nz-card>
+
+  <h2>Completed Tasks</h2>
+    <nz-card class="task-card" *ngFor="let task of completedTasks">
+      <nz-card-meta
+        nzTitle="{{ task.name }}"
+        nzDescription="{{ task.description }}">
+      </nz-card-meta>
+      <p>Status: {{ task.priority }}</p>
+      <p>Status: {{ task.status }}</p>
+      <p>Due Date: {{ task.dueDate }}</p>
+      <div class="task-actions">
+        <button nz-button nzType="primary" (click)="editTask(task)">Edit</button>
+        <button nz-button nzType="danger" (click)="deleteTask(task)">Delete</button>
+      </div>
+    </nz-card>
+
+    
+  </div>

@@ -1,0 +1,43 @@
+<div class="form-container">
+<form (ngSubmit)="addTask()">
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="number" id="id" [(ngModel)]="newTask.id" name="id" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="newTask.name" name="name" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="newTask.description" name="description" required></textarea>
+    </div>
+  
+    <div class="form-group">
+      <label for="priority">Priority:</label>
+      <select id="priority" [(ngModel)]="newTask.priority" name="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <select id="status" [(ngModel)]="newTask.status" name="status" required>
+        <option value="to-do">To-Do</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" [(ngModel)]="newTask.dueDate" name="dueDate" required>
+    </div>
+  
+    <button type="submit">Add Task</button>
+  </form>
+</div>

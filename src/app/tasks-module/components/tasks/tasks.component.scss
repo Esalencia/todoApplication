@@ -1,0 +1,19 @@
+.tasks-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.task-card {
+  margin-bottom: 1rem;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.task-actions button {
+  margin-left: 0.5rem;
+}
